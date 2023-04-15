@@ -151,10 +151,10 @@
         </ul>
       </div>
       <div class="react block">
+        <h2 class="react__title title" id="popover">React</h2>
         <div id="popoverContent" class="create-react-app">
           npm create vite@latest my-app -- --template react-swc
         </div>
-        <h2 class="react__title title" id="popover">React</h2>
         <ul class="react__list list">
           <li class="react__item item">
             <a class="react__link link" href="https://uk.reactjs.org/">React</a>
@@ -190,6 +190,25 @@
         </ul>
       </div>
     </div>
-    <script src="/public/index.js"></script>
+    <script>
+      const popover = document.querySelector("#popover");
+      const content = document.querySelector("#popoverContent");
+
+      popover.addEventListener("mouseenter", () => {
+        content.classList.add("popoverShow");
+      });
+
+      popover.addEventListener("mouseleave", () => {
+        content.classList.remove("popoverShow");
+      });
+
+      content.addEventListener("mouseenter", () => {
+        content.classList.add("popoverShow");
+      });
+
+      content.addEventListener("mouseleave", () => {
+        content.classList.remove("popoverShow");
+      });
+    </script>
   </body>
 </html>
