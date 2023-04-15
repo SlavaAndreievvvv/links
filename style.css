@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(100, 164, 220, 0.514);
+  font-family: Rubik;
+  font-weight: 100;
+}
+ul {
+  list-style-position: inside;
+}
+
+.header {
+  height: 100px;
+  min-width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(100, 164, 220, 0.514);
+}
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+@media (min-width: 1245px) {
+  .main {
+    justify-content: space-between;
+  }
+}
+
+.block {
+  margin-bottom: 20px;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .block {
+    width: 30%;
+  }
+}
+
+.git__title,
+.css__title,
+.html__title,
+.other__title,
+.js__title,
+.react__title {
+  margin-bottom: 18px;
+}
+
+.css__item,
+.git__item,
+.html__item,
+.other__item,
+.js__item,
+.react__item {
+  margin-bottom: 12px;
+}
+
+.link {
+  color: rgb(4, 9, 51);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: blue;
+}
+
+.link:focus {
+  color: rgb(67, 176, 239);
+}
+
+button:disabled {
+  background-color: rgba(9, 23, 91, 0.453);
+}
+.react {
+  position: relative;
+  z-index: 1;
+}
+.create-react-app {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  position: absolute;
+  top: -56px;
+  left: -194px;
+  transition: all 0.3s ease;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popoverShow {
+  visibility: visible;
+  opacity: 1;
+}
