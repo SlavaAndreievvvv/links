@@ -98,13 +98,14 @@ button:disabled {
   z-index: 1;
 }
 .create-react-app {
-  display: block;
+  display: flex;
+  align-items: center;
   visibility: hidden;
   opacity: 0;
   white-space: nowrap;
   position: absolute;
-  top: -56px;
-  left: -194px;
+  top: -71px;
+  left: -283px;
   transition: all 0.3s ease;
   padding: 20px;
   display: flex;
@@ -114,4 +115,25 @@ button:disabled {
 .popoverShow {
   visibility: visible;
   opacity: 1;
+}
+#copyButton {
+  background-color: #1c2331;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 12px;
+}
+
+#copyButton:hover {
+  background-color: #2e3440;
+  color: #fff;
 }

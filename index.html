@@ -153,7 +153,8 @@
       <div class="react block">
         <h2 class="react__title title" id="popover">React</h2>
         <div id="popoverContent" class="create-react-app">
-          npm create vite@latest my-app -- --template react-swc
+          <p>npm create vite@latest my-app -- --template react-swc</p>
+          <button id="copyButton">Copy code</button>
         </div>
         <ul class="react__list list">
           <li class="react__item item">
@@ -216,6 +217,20 @@
       content.addEventListener("mouseleave", () => {
         content.classList.remove("popoverShow");
       });
+
+      document
+        .getElementById("copyButton")
+        .addEventListener("click", function () {
+          var textToCopy =
+            "npm create vite@latest my-app -- --template react-swc";
+          var dummy = document.createElement("textarea");
+          document.body.appendChild(dummy);
+          dummy.value = textToCopy;
+          dummy.select();
+          document.execCommand("copy");
+          document.body.removeChild(dummy);
+          this.textContent = "Copied!";
+        });
     </script>
   </body>
 </html>
